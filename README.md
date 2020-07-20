@@ -2,7 +2,7 @@ This is a collection of Solidity snippets for people who like to learn by exampl
 
 ## Examples
 
-### array-delete.sol
+### array-delete.sol(passed)
 ```js
 contract ArrayDelete {
     uint[] numbers;
@@ -20,9 +20,11 @@ contract ArrayDelete {
         return numbers;
     }
 }
+
+output: 00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000006400000000000000000000000000000000000000000000000000000000000000c80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000019000000000000000000000000000000000000000000000000000000000000001f4
 ```
 
-### array-of-strings.sol
+### array-of-strings.sol(passed)
 ```js
 contract MyContract {
     string[] strings;
@@ -36,9 +38,11 @@ contract MyContract {
         return strings[1];
     }
 }
+
+output:000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000036279650000000000000000000000000000000000000000000000000000000000
 ```
 
-### array-passing.sol
+### array-passing.sol(passed)
 ```js
 contract A {
     uint256[] public numbers;
@@ -63,6 +67,8 @@ contract Manager {
         return a.numbers(0);
     }
 }
+output:000000000000000000000000000000000000000000000000000000000000000a
+log: first try succeeds, then fails for all next tries
 ```
 
 ### array-return.sol
@@ -437,7 +443,7 @@ contract B {
 
 ```
 
-### reentry-attack.sol
+### reentry-attack.sol(failed)
 ```js
 contract MiniDAO {
     mapping (address => uint) balances;
@@ -549,7 +555,7 @@ contract MyContract {
 
 ```
 
-### sha3.sol
+### sha3.sol(passed)
 ```js
 contract Sha3 {
     function hashArray() constant returns(bytes32) {
@@ -624,7 +630,7 @@ contract Sha3 {
 }
 ```
 
-### tail-recursion.sol
+### tail-recursion.sol(passed)
 ```js
 pragma solidity ^0.4.8;
 
@@ -657,7 +663,7 @@ contract MyContract {
 
 ```
 
-### tuple.sol
+### tuple.sol(passed)
 ```js
 contract A {
     function tuple() returns(uint, string) {
